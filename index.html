@@ -194,9 +194,21 @@ el('clear').addEventListener('click',renderThermalBands);
   TEST CONNEXION GOOGLE SHEETS
 </button>
 
+
 <script>
 async function testGoogleSheets() {
-  alert("Bouton de test prêt. Connexion à configurer.");
+  const url = prompt(
+    "Colle ici l'URL de ton application Apps Script (terminant par /exec) :"
+  );
+
+  if (!url) return;
+
+  if (!url.startsWith("https://script.google.com/") ||
+      !url.endsWith("/exec")) {
+    alert("URL Apps Script incorrecte.");
+    return;
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 </script>
-</body></html>
