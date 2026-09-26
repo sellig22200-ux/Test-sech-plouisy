@@ -189,4 +189,14 @@ el('clear').addEventListener('click',renderThermalBands);
  el('clear').addEventListener('click',()=>{if(!log.length){realLog=[];realFull=[];persist();status.textContent='MODE RÉEL — historique effacé.';}});
  if(realLog.length){real();}else{demoMode();}
 })();
-</script></body></html>
+</script>
+<button type="button" onclick="testGoogleSheets()">
+  TEST CONNEXION GOOGLE SHEETS
+</button>
+
+<script>
+async function testGoogleSheets() {
+  alert("Bouton de test prêt. Connexion à configurer.");
+}
+</script>
+</body></html>
